@@ -3,12 +3,9 @@
 
 const arr = [0, 1, 2, 3, 4];
 
-const triple = () => {
-  // TODO
-};
+const triple = arr.map(el => el * 3)
+console.log(triple)
 
 Array.prototype.map = function(fun) {
-  // TODO
-};
-
-console.log(arr.map(triple));
+  fun(this)
+}
