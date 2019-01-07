@@ -4,28 +4,56 @@ const assert = require("assert");
 
 const tokenize = str => {
   // TODO - write a function which converts a multi-word string into an array of words
+  str.split();
 };
 
 const reverse = str => {
   // TODO - write a function which reverses the string
+ return str.split("").reverse().join("");
+  
 };
 
 const uniqueOnes = arr => {
   // TODO - write a function which returns the inputted array without duplicate elements
-};
-
+    return arr.filter(function(item, index){
+      return arr.indexOf(item) >= index;
+    });
+  };
+uniqueOnes([1, 1, 2, 2, 3, 3])
 const factorial = num => {
   // TODO - write a function which returns the factorial of a positive integer
-};
+  if (num === 0 || num === 1)
+    return 1;
+  for (var i = num - 1; i >= 1; i--) {
+    num *= i;
+  }
+  console.log(num)
+  return num;
+}
+factorial(5);
 
 const zip = (arr1, arr2) => {
   // TODO - write a function which combines two arrays into an array of 2-element arrays and returns -1
   // if the two arrays are of unequal length
   // Example: zip([1, 2, 3], [5, 3, 1]) === [[1, 5], [2, 3], [3, 1]]
-};
+    if (arr1.length !== arr2.length) {
+      return -1;
+    }
+    var arr3 = []
 
+    for (var i = 0; i < arr1.length; i++) {
+      var arr = [arr1[i],arr2[i]]
+      arr3.push(arr)
+    }
+    console.log(arr3)
+    return arr3
+  }
+zip([1,2,3],[4,5,6])
 const unzip = arr => {
   // TODO - Write a function which does the opposite of `zip()`
+  for (var i -0; i < arr.length; i++) {
+    var arr1={arr}
+  }
 };
 
 const shiftRight = (str, num) => {
@@ -43,4 +71,4 @@ const announceDate = () => {
 assert(1 < 2);
 assert(1 + 2 === 3);
 assert([2, 3][0] === 2);
-// asssert (reverse("3df") === "fd3")
+assert(reverse("3df") === "fd3")
